@@ -1,0 +1,80 @@
+[gd_scene load_steps=9 format=3 uid="uid://bf0q1l6wp2d1l"]
+
+[ext_resource type="Script" path="res://Scripts/Card.gd" id="1_tfo71"]
+[ext_resource type="Texture2D" uid="uid://cs3qtbp5p0d8p" path="res://Assests/cardbase-big.png" id="2_0se5f"]
+[ext_resource type="Texture2D" uid="uid://bo5pyk0kboykj" path="res://Assests/usesicon.png" id="3_n1jrg"]
+[ext_resource type="FontFile" uid="uid://ccwans1lbo47y" path="res://Assests/PressStart2P-Regular.ttf" id="4_dy1oa"]
+[ext_resource type="Texture2D" uid="uid://v52r58jseixt" path="res://Assests/blue-fire.png" id="5_s0a66"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_smv20"]
+line_spacing = 2.0
+font = ExtResource("4_dy1oa")
+font_size = 8
+
+[sub_resource type="LabelSettings" id="LabelSettings_l3r8n"]
+font = ExtResource("4_dy1oa")
+font_size = 8
+
+[sub_resource type="LabelSettings" id="LabelSettings_y3i13"]
+line_spacing = 1.0
+font = ExtResource("4_dy1oa")
+font_size = 8
+
+[node name="Card" type="Node2D"]
+script = ExtResource("1_tfo71")
+card_name = "New name"
+card_description = "new desciption"
+
+[node name="BaseCardSprite" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_0se5f")
+
+[node name="DurabilityDisplay" type="Node2D" parent="."]
+position = Vector2(43, -63)
+
+[node name="DurabilityBG" type="Sprite2D" parent="DurabilityDisplay"]
+texture_filter = 1
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("3_n1jrg")
+
+[node name="DurabilityLbl" type="Label" parent="DurabilityDisplay"]
+texture_filter = 1
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 36.0
+offset_bottom = 19.0
+text = "3"
+label_settings = SubResource("LabelSettings_smv20")
+
+[node name="CardName" type="Node2D" parent="."]
+position = Vector2(-23, -66)
+
+[node name="NameLbl" type="Label" parent="CardName"]
+texture_filter = 1
+offset_left = -17.0
+offset_top = 6.0
+offset_right = 64.0
+offset_bottom = 19.0
+text = "Attack
+"
+label_settings = SubResource("LabelSettings_l3r8n")
+autowrap_mode = 1
+
+[node name="CardImage" type="Node2D" parent="."]
+position = Vector2(3, -26)
+
+[node name="CardImageSprite" type="Sprite2D" parent="CardImage"]
+texture_filter = 1
+texture = ExtResource("5_s0a66")
+
+[node name="CardDescription" type="Label" parent="."]
+texture_filter = 1
+offset_left = -40.0
+offset_top = 3.0
+offset_right = 40.0
+offset_bottom = 57.0
+text = "20 DMG"
+label_settings = SubResource("LabelSettings_y3i13")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
