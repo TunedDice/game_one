@@ -1,0 +1,24 @@
+Player Scene calls Battle Scene
+	Battle Scene updates Player health when they take damage/health (Can be a function in Player node called "update_health(int variable)" that will update the player's health
+	When player interacts with Enemy, Battle Scene is called and Enemy node is created in Battle
+	
+	
+Battle
+	- Reading information from Player node, Creates/Reads from enemy node, puts them together and displays information (health)
+	
+
+Cards
+	- Creates cards with all of its attributes, can start working on a "master file" that can read a list of all cards from one file
+	- Implement functions that will do damage or heal based on its function 
+	- 
+
+Player
+	- Has information for player's health, hand, and stores all player cards
+	- Can call the battle and change to board while relaying information 
+	- 
+	
+Overworld
+	- Player (with movement)
+	- Map (Generating)
+	- Interactions
+	- Enemies
