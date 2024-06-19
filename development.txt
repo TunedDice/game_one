@@ -22,3 +22,6 @@ Overworld
 	- Map (Generating)
 	- Interactions
 	- Enemies
+	
+Interface (Pause, Main menu)
+	- Add functionality to the pause menu to do various debug functions (add cards, health, enemies, etc.)
