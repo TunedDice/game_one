@@ -23,6 +23,7 @@ func set_card_values(card_name: String, damage_amount: int, element: String, dur
 	durability_lbl.set_text(str(card.durability))
 	name_lbl.set_text(card.card_name)
 	damage_lbl.set_text(str(card.damage_amount))
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass

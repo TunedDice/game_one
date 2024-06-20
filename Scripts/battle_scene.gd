@@ -24,5 +24,5 @@ func _on_button_pressed():
 func _on_button_2_pressed():
 	var card = card_scene.instantiate()
 	spawn_point.add_child(card)
-	card.set_card_values("cool card", 5, "water", 3, 9, "discard ability")
+	card.set_card_values("awesome card", 8, "water", 1, 2, "discard damage")
 	card.visible = true
