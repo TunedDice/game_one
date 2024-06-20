@@ -3,25 +3,25 @@ Player Scene calls Battle Scene
 	When player interacts with Enemy, Battle Scene is called and Enemy node is created in Battle
 	
 	
-Battle
+Battle - Dylan
 	- Reading information from Player node, Creates/Reads from enemy node, puts them together and displays information (health)
-	
-
-Cards
-	- Creates cards with all of its attributes, can start working on a "master file" that can read a list of all cards from one file
+	- Manager for enemy/player stats (when a battle is started)
 	- Implement functions that will do damage or heal based on its function 
-	- 
 
-Player
+Cards - Ely, Omar
+	- Creates cards with all of its attributes, can start working on a "master file" that can read a list of all cards from one file
+	- Database storing all cards
+
+Player - Alek
 	- Has information for player's health, hand, and stores all player cards
 	- Can call the battle and change to board while relaying information 
 	- 
 	
-Overworld
+Overworld - Vak
 	- Player (with movement)
 	- Map (Generating)
 	- Interactions
 	- Enemies
 	
-Interface (Pause, Main menu)
+Interface (Pause, Main menu) - Lewi
 	- Add functionality to the pause menu to do various debug functions (add cards, health, enemies, etc.)

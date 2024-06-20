@@ -1,0 +1,11 @@
+Fireball
+{ 
+  ID: 1
+  Name: Fireball
+  Damage: 4
+  Durability: 5
+  Element: Fire
+  Cooldown: 6
+  Discard: 30
+  Effect: [effect_name]
+}
