@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://b1cc5xco10fq7"]
+[gd_scene load_steps=3 format=3 uid="uid://b1cc5xco10fq7"]
 
 [ext_resource type="Script" path="res://Scripts/battle_scene.gd" id="1_k7chb"]
+[ext_resource type="PackedScene" uid="uid://cnqrnn21hcsp0" path="res://Scenes/player.tscn" id="2_st7t4"]
 
 [node name="Battle Scene" type="Node2D"]
 script = ExtResource("1_k7chb")
@@ -23,6 +24,8 @@ offset_bottom = -138.0
 text = "Create Card 2"
 
 [node name="Spawn" type="Node2D" parent="."]
+
+[node name="Player" parent="." instance=ExtResource("2_st7t4")]
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
