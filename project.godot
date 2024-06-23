@@ -14,3 +14,15 @@ config/name="Dispell"
 run/main_scene="res://Scenes/battle_scene.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+event_handler="*res://Scripts/event_handler.gd"
+
+[display]
+
+window/size/viewport_width=2034
+window/size/viewport_height=1296
+window/size/window_width_override=678
+window/size/window_height_override=678
+window/stretch/mode="viewport"
