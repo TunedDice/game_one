@@ -4,6 +4,7 @@ extends CharacterBody2D
 const speed = 500
 var current_dir = "none"
 
+@export var inv: Inv
 func _ready():
 	$AnimatedSprite2D.play("Idle")
 func _physics_process(delta):

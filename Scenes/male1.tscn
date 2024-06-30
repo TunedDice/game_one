@@ -1,10 +1,12 @@
-[gd_scene load_steps=12 format=3 uid="uid://cofgxg4e6ijgd"]
+[gd_scene load_steps=14 format=3 uid="uid://cofgxg4e6ijgd"]
 
 [ext_resource type="Script" path="res://Scripts/male1.gd" id="1_848qc"]
 [ext_resource type="Texture2D" uid="uid://c3j7vsgtmqybh" path="res://Assests/M-anis/character_maleAdventurer_idle.png" id="2_3t3eo"]
+[ext_resource type="Resource" uid="uid://bgg0l618dnmpd" path="res://inventory/playerinv.tres" id="2_82m28"]
 [ext_resource type="Texture2D" uid="uid://wf18qssctrog" path="res://Assests/M-anis/character_maleAdventurer_run0.png" id="3_6bbt8"]
 [ext_resource type="Texture2D" uid="uid://cgfxky4cs0we7" path="res://Assests/M-anis/character_maleAdventurer_run1.png" id="4_j8bli"]
 [ext_resource type="Texture2D" uid="uid://c1swhhrlkkmi1" path="res://Assests/M-anis/character_maleAdventurer_run2.png" id="5_qlp62"]
+[ext_resource type="PackedScene" uid="uid://b8u6tufstm250" path="res://inventory/inv_ui.tscn" id="7_idb23"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_is15a"]
 
@@ -51,6 +53,7 @@ animations = [{
 
 [node name="Male1" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_848qc")
+inv = ExtResource("2_82m28")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
@@ -58,6 +61,12 @@ shape = SubResource("CircleShape2D_is15a")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_vp3mb")
-animation = &"Idle"
+animation = &"run"
 autoplay = "run"
-frame_progress = 0.19307
+
+[node name="Inv_UI" parent="." instance=ExtResource("7_idb23")]
+offset_left = -138.0
+offset_top = -201.0
+offset_right = 141.0
+offset_bottom = -129.0
+scale = Vector2(1.25, 1.25)

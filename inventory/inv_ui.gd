@@ -1,0 +1,34 @@
+extends Control
+
+@onready var inv: Inv = preload("res://inventory/playerinv.tres")
+# prelaoding player invenotry 
+@onready var slots: Array = $NinePatchRect/GridContainer.get_children()
+#accesses all slots in inventory 
+
+var is_open = false
+
+func _ready():
+	update_slots()
+	close()
+	
+func update_slots():
+	for i in range(min(inv.items.size(), slots.size())):
+		# checks slots
+		slots[i].update(inv.items[i])
+		# iterating and updating with resource in each slot
+
+func _process(delta):
+	if Input.is_action_just_pressed("i"):
+		if is_open:
+			close()
+		else:
+			open()
+
+func open():
+	visible = true
+	is_open = true
+	
+
+func close():
+	visible = false
+	is_open = false

@@ -1482,6 +1482,21 @@ sources/3 = SubResource("TileSetAtlasSource_eugnc")
 sources/6 = SubResource("TileSetAtlasSource_5b0tg")
 sources/7 = SubResource("TileSetAtlasSource_778rt")
 
+[sub_resource type="Animation" id="Animation_8uun3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.0509804, 0, 0.0509804, 0)]
+}
+
 [sub_resource type="Animation" id="Animation_1268i"]
 resource_name = "fade_in"
 length = 0.4
@@ -1496,21 +1511,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(0.0509804, 0, 0.0509804, 0), Color(0.0509804, 0, 0.0509804, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_8uun3"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0.0509804, 0, 0.0509804, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_dfu6t"]
@@ -1540,6 +1540,7 @@ _data = {
 script = ExtResource("1_ohbtu")
 
 [node name="TileMap" type="TileMap" parent="."]
+light_mask = 3
 position = Vector2(2, 0)
 scale = Vector2(4, 4)
 tile_set = SubResource("TileSet_r6gq4")
@@ -1552,6 +1553,8 @@ layer_1/tile_data = PackedInt32Array(655370, 6, 0, 720906, 6, 1, 655371, 65542, 
 [node name="Male1" parent="." instance=ExtResource("8_kb3c1")]
 position = Vector2(338, 87)
 scale = Vector2(0.5, 0.5)
+collision_layer = 3
+collision_mask = 3
 
 [node name="blue_slime" parent="." instance=ExtResource("9_7pia8")]
 position = Vector2(521, 312)
