@@ -1,0 +1,113 @@
+[gd_scene load_steps=2 format=3 uid="uid://btkagfy4xcs5j"]
+
+[ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_fc81e"]
+
+[node name="main_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fc81e")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 2
+offset_right = 1152.0
+offset_bottom = 647.0
+color = Color(0.0313726, 0.027451, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 186.0
+offset_right = 1151.0
+offset_bottom = 649.0
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+alignment = 1
+
+[node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Play"
+vertical_icon_alignment = 0
+
+[node name="Options" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Options"
+vertical_icon_alignment = 0
+
+[node name="Help" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Help
+"
+vertical_icon_alignment = 0
+
+[node name="Exit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Exit"
+vertical_icon_alignment = 0
+
+[node name="TextEdit" type="TextEdit" parent="."]
+layout_mode = 2
+offset_left = 473.0
+offset_top = 133.0
+offset_right = 695.0
+offset_bottom = 222.0
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 54
+text = "DISPELL"
+editable = false
+context_menu_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+virtual_keyboard_enabled = false
+middle_mouse_paste_enabled = false
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 472.0
+offset_top = 141.0
+offset_right = 753.0
+offset_bottom = 238.0
+theme_override_font_sizes/font_size = 54
+text = "DISPELL"
+
+[node name="stars1" type="CPUParticles2D" parent="."]
+position = Vector2(183, -71)
+amount = 16
+speed_scale = 2.0
+emission_shape = 5
+emission_points = PackedVector2Array()
+emission_normals = PackedVector2Array()
+emission_colors = PackedColorArray()
+direction = Vector2(0, 1)
+spread = 90.0
+gravity = Vector2(980, 980)
+initial_velocity_max = 681.81
+
+[node name="stars2" type="CPUParticles2D" parent="."]
+position = Vector2(1067, -74)
+amount = 16
+speed_scale = 3.0
+emission_shape = 5
+emission_points = PackedVector2Array()
+emission_normals = PackedVector2Array()
+emission_colors = PackedColorArray()
+direction = Vector2(0, 1)
+spread = 110.0
+gravity = Vector2(-980, 980)
+initial_velocity_max = 681.81
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Help" to="." method="_on_help_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
