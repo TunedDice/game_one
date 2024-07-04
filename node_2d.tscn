@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://w7k0kuma450m"]
+
+[ext_resource type="Script" path="res://Dungeongen.gd" id="1_l6emr"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 2
+script = ExtResource("1_l6emr")
