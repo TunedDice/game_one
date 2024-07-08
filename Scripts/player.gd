@@ -1,16 +1,21 @@
-extends Node2D
+extends CharacterBody2D
 
-@onready var speed = 50
-# Called when the node enters the scene tree for the first time.
-func _ready():
+@export var max_health: int = 20
+var current_health = max_health
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _phyics_process(delta):
-	pass
+@export var speed = 400
 
 
-func anything():
+func get_input():
 	var input_direction = Input.get_vector("left", "right", "up", "down")
-	var velocity = input_direction * speed
-	
+	velocity = input_direction * speed
+
+func update_health(damage: int):
+	if (current_health - damage < 0):
+		return 0
+	else:
+		return current_health - damage
+
+func _physics_process(delta):
+	get_input()
+	move_and_slide()

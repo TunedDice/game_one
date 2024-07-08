@@ -18,3 +18,6 @@ func _init(card_name: String, damage_amount: int, element: String, durability: i
 		self.durability = durability
 		self.cooldown = cooldown
 		self.discard = discard
+
+func get_damage():
+	return self.damage_amount
