@@ -1,0 +1,46 @@
+{
+	"Fireball":{
+		"damage": 95, 
+		"durability": [1,4], 
+		"cooldown": 8, 
+		"discard": "this is discard",
+		"effects": ["burn", "poison"]
+	}, 
+	
+	
+	"Candle Stick":{
+		"damage": 80, 
+		"durability": [1,4], 
+		"cooldown": 4, 
+		"discard": "this is discard",
+		"effects": ["burn"]
+	},
+	
+	
+	"Scorch Ray":{
+		"damage": 105, 
+		"durability": [1,4], 
+		"cooldown": 12, 
+		"discard": "this is discard",
+		"effects": ["burn", "stun"]
+	},
+	
+	
+	"Smog":{
+		"damage": 100,
+		"durability": [1,4], 
+		"cooldown": 12, 
+		"discard": "this is discard",
+		"effects": ["burn", "stun"]
+	},	
+		
+		
+	"Super Nova":{
+		"damage": 250,
+		"durability": [1,1], 
+		"cooldown": 30, 
+		"discard": "this is discard",
+		"effects": ["burn", "stun"]
+	}
+	
+}

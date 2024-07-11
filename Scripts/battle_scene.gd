@@ -27,17 +27,18 @@ func get_player_health():
 func do_damage(damage: int):
 	player_object.take_damage(damage)
 
+
+#this is just a sample card
 func _on_button_pressed():
 	var card = card_scene.instantiate()
 	spawn_point.add_child(card)
-	card.set_card_values("cool card", 5, "water", 3, 2, "discard ability")
+	card.load_card("Scorch Ray", "fire")
 	card.visible = true
 
-
+#this is also just a sample card
 func _on_button_2_pressed():
 	var card = card_scene.instantiate()
-	spawn_point2.add_child(card)
-	card.set_card_values("awesome card", 8, "water", 1, 2, "discard damage")
+	spawn_point.add_child(card)
+	card.load_card("Smog", "fire")
 	card.visible = true
-
 
