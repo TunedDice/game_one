@@ -22,7 +22,6 @@ font_size = 8
 
 [node name="Card" type="Node2D"]
 script = ExtResource("1_vsuoq")
-card_name = "New name"
 
 [node name="BaseCardSprite" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -77,3 +76,7 @@ label_settings = SubResource("LabelSettings_y3i13")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
+
+[node name="CardEffect" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
