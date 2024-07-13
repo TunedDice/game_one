@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://ns2dq6gueniy"]
+
+[ext_resource type="PackedScene" uid="uid://bq370rlqjcycf" path="res://Scenes/options/options_menu_ingame.tscn" id="1_nod28"]
+
+[node name="settings" type="CanvasLayer"]
+
+[node name="options_menu_ingame" parent="." instance=ExtResource("1_nod28")]

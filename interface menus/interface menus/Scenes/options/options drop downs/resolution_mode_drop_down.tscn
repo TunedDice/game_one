@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://b65ecg13kv61e"]
+
+[ext_resource type="PackedScene" uid="uid://vwbgotvgew66" path="res://Scenes/options/options drop downs/options_drop_down.tscn" id="1_4okdt"]
+[ext_resource type="Script" path="res://Scenes/options/options drop downs/resolution_mode_drop_down.gd" id="2_n5aew"]
+
+[node name="resolution_mode_drop_down" instance=ExtResource("1_4okdt")]
+script = ExtResource("2_n5aew")
+
+[node name="HBoxContainer" parent="." index="0"]
+layout_mode = 0
+
+[node name="BASE Label" parent="HBoxContainer" index="0"]
+text = "Resolution"

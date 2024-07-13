@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckpv1s8hodpm"]
+
+[ext_resource type="PackedScene" uid="uid://vwbgotvgew66" path="res://Scenes/options/options drop downs/options_drop_down.tscn" id="1_v5tj6"]
+[ext_resource type="Script" path="res://Scripts/windows_mode_drop_down.gd" id="2_o5vry"]
+
+[node name="windows_mode_drop_down" instance=ExtResource("1_v5tj6")]
+script = ExtResource("2_o5vry")
+
+[node name="HBoxContainer" parent="." index="0"]
+layout_mode = 0
+
+[node name="BASE Label" parent="HBoxContainer" index="0"]
+text = "Window Mode
+"
